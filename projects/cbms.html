@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CBMS — Central Bank Management System</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Navigation bar styles (you can move this block into styles.css) -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .project-page .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(26, 16, 10, 0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      z-index: 100;
+    }
+
+    .project-page .main-nav {
+      justify-content: flex-end;
+      gap: clamp(0.7rem, 1.2vw, 1.5rem);
+    }
+
+    .project-page .main-nav a.active {
+      opacity: 1;
+    }
+
+    .project-page .main-nav a.active::after {
+      transform: scaleX(1);
+    }
+
+    .project-page [id] {
+      scroll-margin-top: 90px;
+    }
+
+    .tech-pill {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 900px) {
+      .project-page .main-nav {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        white-space: nowrap;
+        scrollbar-width: none;
+      }
+
+      .project-page .main-nav::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="project-page">
+  <div class="page-shell">
+
+    <!-- ===== NAVIGATION BAR ===== -->
+    <header class="topbar">
+      <div class="brand">Manya Ruhela</div>
+      <nav class="main-nav" id="projNav">
+        <a href="#overview">Overview</a>
+        <a href="#features">Features</a>
+        <a href="#roles">User Roles</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#results">Results</a>
+        <a href="#outlook">Contribution</a>
+        <a href="../index.html">Home</a>
+      </nav>
+    </header>
+
+    <!-- 1. HERO -->
+    <section class="proj-hero section">
+      <div class="reveal">
+        <h1>Central Bank Management System</h1>
+        <p class="proj-hero-desc">A centralized banking platform for managing accounts, transactions, KYC, loans, and
+          banking operations.</p>
+        <div style="margin-bottom: 2rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+          <span class="tech-pill">PHP</span>
+          <span class="tech-pill">MySQL</span>
+          <span class="tech-pill">HTML</span>
+          <span class="tech-pill">CSS</span>
+          <span class="tech-pill">JavaScript</span>
+          <span class="tech-pill">PDO</span>
+          <span class="tech-pill">XAMPP</span>
+        </div>
+        <a href="https://github.com/manyaruhela2005-bit/Central-Bank-Management-System" class="proj-hero-btn"
+          target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </section>
+
+    <!-- 2. PROJECT OVERVIEW -->
+    <section id="overview" class="proj-middle section">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Project Overview</h2>
+          <p>CBMS (Central Bank Management System) is a centralized banking management web application designed to bring
+            multiple banking operations into one unified platform. It leverages a full-stack architecture to seamlessly
+            integrate accounts, transactions, and internal banking workflows.</p>
+        </div>
+
+        <!-- 3. THE PROBLEM & 4. THE SOLUTION -->
+        <div class="proj-grid" style="margin-bottom: 4rem;">
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>The Problem</h3>
+            <p>Traditional banking systems often operate independently, which creates:</p>
+            <ul>
+              <li>Multiple logins for different banks</li>
+              <li>No unified financial overview</li>
+              <li>Fragmented banking data &amp; data redundancy</li>
+              <li>Inefficient inter-bank transactions</li>
+              <li>No centralized transaction tracking</li>
+              <li>Complex KYC and loan processing</li>
+              <li>Limited interoperability</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>The Solution</h3>
+            <p>CBMS resolves these fragmentation issues by providing:</p>
+            <ul>
+              <li>Single login for multiple banking operations</li>
+              <li>Centralized account &amp; transaction management</li>
+              <li>Role-based access controls</li>
+              <li>Unified KYC verification &amp; Loan processing</li>
+              <li>Beneficiary, Complaint, and Feedback management</li>
+              <li>Administrative controls and audit logging</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 5. KEY FEATURES -->
+        <div id="features" class="proj-middle-header reveal">
+          <h2>Key Features &amp; Modules</h2>
+        </div>
+        <div class="proj-grid">
+          <div class="proj-feature-card reveal">
+            <h3>Core System Modules</h3>
+            <ul>
+              <li><strong>Authentication Module:</strong> Secure login and registration.</li>
+              <li><strong>Dashboard Module:</strong> Role-specific system overviews.</li>
+              <li><strong>Account Management:</strong> Cross-bank account handling.</li>
+              <li><strong>Transaction Module:</strong> Secure inter-account fund transfers.</li>
+              <li><strong>Database Module:</strong> PDO-driven relational processing.</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>Operational Modules</h3>
+            <ul>
+              <li><strong>KYC Module:</strong> Document submission and verification workflows.</li>
+              <li><strong>Loan Module:</strong> Application, review, and tracking system.</li>
+              <li><strong>Beneficiary Module:</strong> Simplified payee management.</li>
+              <li><strong>Support Modules:</strong> Complaints and Feedback systems.</li>
+              <li><strong>Audit &amp; Admin:</strong> Extensive system logging and employee management.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. USER ROLES -->
+    <section id="roles" class="proj-middle section" style="background: #fff;">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>User Roles</h2>
+          <p>The application implements strict role-based access control to ensure secure, segmented functionality for
+            different users.</p>
+        </div>
+        <div class="proj-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+          <div class="proj-feature-card reveal" style="background: #fdfaf5;">
+            <h3>1. User / Customer</h3>
+            <ul>
+              <li>Register, log in, and manage profile</li>
+              <li>View personal dashboard and account balance</li>
+              <li>Manage multiple bank accounts &amp; beneficiaries</li>
+              <li>Transfer money (requires password re-confirmation)</li>
+              <li>Apply for and track loans</li>
+              <li>Complete KYC requirements</li>
+              <li>Submit complaints and track feedback</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>2. Employee</h3>
+            <ul>
+              <li>Access an employee dashboard</li>
+              <li>View system-wide statistics</li>
+              <li>Process KYC requests</li>
+              <li>Review, approve, or reject loan requests</li>
+              <li>View and manage complaints</li>
+              <li>View transaction history &amp; review feedback</li>
+              <li>Access audit logs</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fdfaf5;">
+            <h3>3. Admin</h3>
+            <ul>
+              <li>Create, edit, delete, and block users</li>
+              <li>Manage employees and other administrators</li>
+              <li>Manage banks and oversee accounts</li>
+              <li>Manage loans and resolve escalated complaints</li>
+              <li>Review feedback and access complete audit logs</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. SYSTEM ARCHITECTURE & 8. DATABASE DESIGN -->
+    <section id="architecture" class="proj-middle section">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Architecture &amp; Database</h2>
+        </div>
+        <div class="proj-grid">
+          <div class="proj-feature-card reveal">
+            <h3>System Architecture</h3>
+            <p
+              style="margin-bottom: 1rem; font-family: var(--mono, monospace); font-size: 0.95rem; background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 8px; text-align: center; line-height: 1.7;">
+              USER<br>
+              ↓<br>
+              HTML / CSS / JavaScript Interface<br>
+              ↓<br>
+              PHP Application Layer<br>
+              ↓<br>
+              PDO<br>
+              ↓<br>
+              MySQL Database<br>
+              ↓<br>
+              Response
+            </p>
+            <p><strong>Data Flow:</strong> User → Request → PHP Server → MySQL Database → Response</p>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>Database Design</h3>
+            <p>The system uses MySQL as a centralized relational database. Important concepts demonstrated include
+              Primary/Foreign keys, normalization, referential integrity, and data validation.</p>
+            <p><strong>Important Entities:</strong></p>
+            <ul>
+              <li><strong>Users:</strong> Central identity entity governing role-based access.</li>
+              <li><strong>Accounts:</strong> Connects users with banks, storing balances, types, and status.</li>
+              <li><strong>Transactions:</strong> Immutable records of deposits, withdrawals, and transfers.</li>
+              <li><strong>Operations:</strong> Loans, KYC, Beneficiaries, Complaints, Feedback.</li>
+              <li><strong>System:</strong> Employees, Audit Logs, Banks.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. APPLICATION SCREENSHOTS (disabled until you add the image)
+    <section class="proj-middle section" style="background: #fff;">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Application Screenshots</h2>
+          <p>Click on any image to expand.</p>
+        </div>
+        <div class="proj-grid" style="grid-template-columns: 1fr;">
+          <div class="proj-img-box reveal" style="cursor: pointer; aspect-ratio: auto;"
+            onclick="openCertLight('../assets/projects/cbms.jpg', 'CBMS Interface')">
+            <img src="../assets/projects/cbms.jpg" alt="CBMS Interface" loading="lazy"
+              style="border-radius: 12px; max-height: 500px; object-fit: contain; background: #fff;" />
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- 10. RESULTS & ANALYSIS -->
+    <section id="results" class="proj-middle section">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Results &amp; Analysis</h2>
+        </div>
+
+        <div class="proj-grid" style="margin-top: 3rem; grid-template-columns: 1fr;">
+          <div class="proj-feature-card reveal" style="background: #fff; text-align: left;">
+            <h3>Project Outcomes</h3>
+            <ul>
+              <li>Functional role-based access across all major modules</li>
+              <li>Successful and secure transaction processing</li>
+              <li>Maintained data integrity and reduced data redundancy</li>
+              <li>Faster data access and improved operational efficiency</li>
+              <li>A vastly better centralized user experience compared to independent banking systems</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. FUTURE SCOPE & 13. TECHNOLOGIES USED & 14. MY CONTRIBUTION -->
+    <section id="outlook" class="proj-middle section" style="background: #fff;">
+      <div class="proj-middle-container">
+        <div class="proj-grid">
+          <div class="proj-feature-card reveal">
+            <h3>Future Scope</h3>
+            <ul>
+              <li>Integration with real-world banking APIs</li>
+              <li>Cloud deployment and real-time transaction synchronization</li>
+              <li>Stronger authentication and multi-bank integration</li>
+              <li>Advanced fraud detection and AI/ML-based risk assessment</li>
+              <li>AI-assisted loan evaluation</li>
+              <li>Mobile application support and improved scalability</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fdfaf5;">
+            <h3>My Contribution &amp; Technologies</h3>
+            <p><strong>Technologies Used:</strong> PHP, MySQL, HTML, CSS, JavaScript, PDO, XAMPP, VS Code.</p>
+            <p><strong>My Contribution:</strong></p>
+            <ul>
+              <li>Full-stack PHP-based application development</li>
+              <li>MySQL database implementation and relational design</li>
+              <li>Development of core banking modules, accounts, and transaction management</li>
+              <li>Implementation of database relationships and referential integrity</li>
+              <li>Programming authentication and role-based access controls</li>
+              <li>Comprehensive manual testing and debugging</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="proj-footer-section section">
+      <div class="proj-footer-cta reveal">
+        <a href="../index.html" class="proj-footer-btn">← Back to Portfolio</a>
+      </div>
+    </section>
+
+  </div><!-- /page-shell -->
+
+  <!-- ===== IMAGE LIGHTBOX ===== -->
+  <div id="certLightbox" class="cert-lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="cert-lightbox__backdrop" onclick="closeCertLight()" style="position:fixed; inset:0;"></div>
+    <div class="cert-lightbox__inner">
+      <button class="cert-lightbox__close" onclick="closeCertLight()" aria-label="Close">×</button>
+      <img id="certLightboxImg" src="" alt="" />
+      <p id="certLightboxTitle" class="cert-lightbox__title"></p>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+
+  <!-- Active-section highlight for the nav bar -->
+  <script>
+    (function () {
+      var items = [];
+      document.querySelectorAll('#projNav a[href^="#"]').forEach(function (a) {
+        var el = document.querySelector(a.getAttribute('href'));
+        if (el) items.push({ a: a, el: el });
+      });
+      function spy() {
+        var current = null;
+        items.forEach(function (it) {
+          if (it.el.getBoundingClientRect().top <= 140) current = it;
+        });
+        items.forEach(function (it) {
+          it.a.classList.toggle('active', it === current);
+        });
+      }
+      window.addEventListener('scroll', spy, { passive: true });
+      spy();
+    })();
+  </script>
+</body>
+
+</html>

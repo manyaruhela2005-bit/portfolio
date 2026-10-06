@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Profile Portfolio</title>
+  <meta name="description"
+    content="Premium editorial portfolio with an animated illustrated hero and layered editorial sections." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand" aria-label="Brand mark">Manya Ruhela</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Let’s Talk</a>
+    </header>
+
+    <main class="page-content">
+      <section id="hero" class="hero section">
+        <div class="hero-frame">
+          <div class="hero-visual" id="heroVisual">
+            <img id="frameImg" src="Frame0.jpg" alt="Animated girl illustration" />
+            <div id="imgOverlay" class="img-overlay" aria-hidden="true">
+              <div id="greetBlock" class="greet-block" aria-live="polite">
+                <div class="line line-intro">hello,</div>
+                <div class="line line-name-wrap">
+                  <span class="name-highlight">I’m Manya Ruhela.</span>
+                  <svg class="underline-svg" viewBox="0 0 120 18" preserveAspectRatio="none" aria-hidden="true">
+                    <path class="underline-path" d="M4 12 C24 9, 42 7, 60 11 C75 14, 92 7, 116 8" />
+                  </svg>
+                </div>
+                <div class="line line-role">FULL STACK DEVELOPER • AI &amp; ML</div>
+                <div class="line line-tagline">turning ideas into solutions.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about section reveal">
+        <div class="about-layout">
+          <div class="about-visual-panel">
+            <p class="eyebrow">About</p>
+            <h2>
+              Building Tech<br />
+              with Purpose.
+            </h2>
+          </div>
+
+          <div class="about-copy-panel">
+            <p class="intro-kicker">Creative technologist</p>
+            <p class="lede">
+              Full-stack developer and AI/ML builder, turning vision models, APIs and web apps into tools that solve
+              real problems.
+            </p>
+          </div>
+
+          <div class="about-stat stat-one">
+            <span class="stat-label">Focus</span>
+            <strong>AI / ML / CV</strong>
+          </div>
+
+          <div class="about-stat stat-two">
+            <span class="stat-label">Based in</span>
+            <strong>Remote / Global</strong>
+          </div>
+
+          <div class="about-stat stat-three">
+            <span class="stat-label">Currently</span>
+            <strong>Building human-centered digital experiences</strong>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects section reveal">
+        <div class="section-head">
+          <p class="eyebrow">Selected work</p>
+          <h3>Featured projects.</h3>
+        </div>
+        <div class="project-grid projects-editorial">
+          <article class="project-card reveal">
+            <div class="project-number">01</div>
+            <div class="project-media">
+              <img src="assets/projects/cbms.jpg" alt="CBMS project image" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <h4>CENTRAL BANKING MANAGEMENT SYSTEM (CBMS)</h4>
+              <p>Full-stack banking management platform built to manage accounts, transactions and KYC workflows.</p>
+              <a href="projects/cbms.html">VIEW PROJECT <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-number">02</div>
+            <div class="project-media">
+              <img src="assets/projects/recoverx.jpg" alt="RecoverX project image" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <h4>RECOVERX</h4>
+              <p>Data-driven recovery platform for structured case management and workflows.</p>
+              <a href="projects/recoverx.html">VIEW PROJECT <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-number">03</div>
+            <div class="project-media">
+              <img src="assets/projects/border-surveillance.jpg" alt="Border Surveillance project image"
+                loading="lazy" />
+            </div>
+            <div class="project-body">
+              <h4>BORDER SURVEILLANCE &amp; INTRUSION DETECTION</h4>
+              <p>Computer-vision monitoring system for perimeter detection and situational awareness.</p>
+              <a href="projects/border-surveillance.html">VIEW PROJECT <span>→</span></a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-number">04</div>
+            <div class="project-media">
+              <img src="assets/projects/student-management.jpg" alt="Student Management project image" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <h4>STUDENT MANAGEMENT SYSTEM</h4>
+              <p>Student information system for attendance, grades and academic records management.</p>
+              <a href="projects/student-management.html">VIEW PROJECT <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="experience section">
+        <div class="experience-header">
+          <h2 class="exp-title mask-reveal reveal">Experience</h2>
+        </div>
+
+        <div class="exp-wrap simple">
+          <!-- EXPERIENCE 01 - Minimal editorial card -->
+          <article class="exp-card exp-clean reveal">
+            <div class="exp-clean-inner">
+              <div class="exp-num">01</div>
+              <h3 class="exp-org">Bharat Puria Shiksha Samiti</h3>
+              <div class="exp-role">FULL STACK DEVELOPER &amp; VOLUNTEER</div>
+              <p class="exp-desc">Supported students through academic activities, assessments and
+                creative/extracurricular work while engaging directly with them. Identified their academic tracking
+                needs and contributed a technology-based solution to improve how student information and performance
+                were managed.</p>
+            </div>
+          </article>
+
+          <!-- EXPERIENCE 02 - Minimal editorial card -->
+          <article class="exp-card exp-clean reveal">
+            <div class="exp-clean-inner">
+              <div class="exp-num">02</div>
+              <h3 class="exp-org">TATA × FORAGE</h3>
+              <div class="exp-role">GENAI POWERED DATA ANALYTICS JOB SIMULATION</div>
+              <p class="exp-desc">Completed a business-focused data analytics simulation involving AI strategy,
+                exploratory analysis and predictive analytics. Worked through model selection, validation, data
+                interpretation and analytical decision-making.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="skills section reveal">
+        <div class="section-head split-head">
+          <p class="eyebrow">Capabilities</p>
+          <h3>Skills &amp; tools<span class="skills-stop">.</span></h3>
+          <p class="skills-subtitle">Full-stack systems, AI, and product tooling</p>
+        </div>
+
+        <div class="skills-grid refined-skills">
+          <article class="skill-card skill-card--light reveal">
+            <div class="skill-card__label">Frontend</div>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript (ES6+)</li>
+              <li>Responsive Design</li>
+              <li>Tkinter</li>
+            </ul>
+          </article>
+
+          <article class="skill-card skill-card--warm reveal">
+            <div class="skill-card__label">Backend</div>
+            <ul>
+              <li>Python</li>
+              <li>Flask</li>
+              <li>PHP</li>
+              <li>REST APIs</li>
+            </ul>
+          </article>
+
+          <article class="skill-card skill-card--accent reveal">
+            <div class="skill-card__label">AI / ML</div>
+            <ul>
+              <li>OpenCV</li>
+              <li>YOLOv8</li>
+              <li>MediaPipe</li>
+              <li>DINOv2</li>
+              <li>Scikit-learn</li>
+              <li>NLTK</li>
+              <li>NumPy</li>
+              <li>Pandas</li>
+              <li>Matplotlib</li>
+              <li>Seaborn</li>
+            </ul>
+          </article>
+
+          <article class="skill-card skill-card--light reveal">
+            <div class="skill-card__label">Databases</div>
+            <ul>
+              <li>MySQL</li>
+              <li>SQL</li>
+              <li>phpMyAdmin</li>
+            </ul>
+          </article>
+
+          <article class="skill-card skill-card--beige reveal">
+            <div class="skill-card__label">DevOps &amp; Cloud</div>
+            <ul>
+              <li>Docker</li>
+              <li>AWS</li>
+              <li>Git</li>
+              <li>GitHub</li>
+            </ul>
+          </article>
+
+          <article class="skill-card skill-card--light reveal">
+            <div class="skill-card__label">Languages</div>
+            <ul>
+              <li>Python</li>
+              <li>C++ (DSA)</li>
+              <li>JavaScript</li>
+              <li>PHP</li>
+              <li>SQL</li>
+            </ul>
+          </article>
+
+          <article class="skill-card skill-card--light reveal">
+            <div class="skill-card__label">CS Fundamentals</div>
+            <ul>
+              <li>Data Structures &amp; Algorithms</li>
+              <li>OOP</li>
+              <li>DBMS</li>
+              <li>Operating Systems</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="certifications" class="certifications section reveal">
+        <div class="section-head split-head cert-section-head">
+          <p class="eyebrow">Recognition</p>
+          <h3>Certificates.</h3>
+        </div>
+
+        <div class="cert-grid">
+          <!-- 1: TATA x FORAGE -->
+          <article class="cert-feature reveal"
+            onclick="openCertLight('assets/certificates/tataxforage.png','TATA × FORAGE')" role="button" tabindex="0">
+            <div class="cert-art cert-art-primary"
+              style="background-image: url('assets/certificates/tataxforage.png'); background-size: cover; background-position: left center;">
+            </div>
+            <div class="cert-copy">
+              <span>Certificate</span>
+              <h4>TATA × FORAGE</h4>
+            </div>
+          </article>
+
+          <!-- 2: NGO Internship -->
+          <article class="cert-card reveal" onclick="openCertLight('assets/certificates/NGO.png','NGO Internship')"
+            role="button" tabindex="0">
+            <div class="cert-art"
+              style="background-image: url('assets/certificates/NGO.png'); background-size: cover; background-position: top center;">
+            </div>
+            <div class="cert-copy">
+              <span>Certificate</span>
+              <h4>NGO Internship</h4>
+            </div>
+          </article>
+
+          <!-- 3: Python HackerRank -->
+          <article class="cert-card reveal"
+            onclick="openCertLight('assets/certificates/python hackerrank.png','Python — HackerRank')" role="button"
+            tabindex="0">
+            <div class="cert-art"
+              style="background-image: url('assets/certificates/python hackerrank.png'); background-size: cover; background-position: top center;">
+            </div>
+            <div class="cert-copy">
+              <span>Certificate</span>
+              <h4>Python — HackerRank</h4>
+            </div>
+          </article>
+
+          <!-- 4: Python OpenCV -->
+          <article class="cert-card reveal" onclick="openCertLight('assets/certificates/pyhton_CV.png','Python OpenCV')"
+            role="button" tabindex="0">
+            <div class="cert-art cert-art-secondary"
+              style="background-image: url('assets/certificates/pyhton_CV.png'); background-size: cover; background-position: top center;">
+            </div>
+            <div class="cert-copy">
+              <span>Certificate</span>
+              <h4>Python OpenCV</h4>
+            </div>
+          </article>
+
+          <!-- 5: AI Engineer -->
+          <article class="cert-card reveal"
+            onclick="openCertLight('assets/certificates/AI_Certificate.jpg','AI Engineer')" role="button" tabindex="0">
+            <div class="cert-art"
+              style="background-image: url('assets/certificates/AI_Certificate.jpg'); background-size: cover; background-position: top center;">
+            </div>
+            <div class="cert-copy">
+              <span>Certificate</span>
+              <h4>AI Engineer</h4>
+            </div>
+          </article>
+
+          <!-- 6: Other Certificates -->
+          <article class="cert-card reveal" onclick="window.location.href='assets/other Certs/oc.html'" role="button"
+            tabindex="0">
+            <div class="cert-art cert-others-art"></div>
+            <div class="cert-copy">
+              <span>Collection</span>
+              <a href="assets/other Certs/oc.html">Other Certificates <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== CERTIFICATE LIGHTBOX ===== -->
+      <div id="certLightbox" class="cert-lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="cert-lightbox__backdrop" onclick="closeCertLight()" style="position:fixed; inset:0;"></div>
+        <div class="cert-lightbox__inner">
+          <button class="cert-lightbox__close" onclick="closeCertLight()" aria-label="Close">×</button>
+          <img id="certLightboxImg" src="" alt="" />
+          <p id="certLightboxTitle" class="cert-lightbox__title"></p>
+        </div>
+      </div>
+
+
+      <!-- =====================================================
+     CONTACT SECTION (Aurora Brew style)
+     Paste in place of your old contact <section> in index.html.
+     The <style> and <script> can stay right here.
+     ===================================================== -->
+
+      <style>
+        .connect {
+          --cream: #f5ece0;
+          --copper: #c79a63;
+          --copper-deep: #b67e42;
+          --choc: #2a1b12;
+          --choc-dark: #1a100a;
+          position: relative;
+          overflow: hidden;
+          color: var(--cream);
+          text-align: center;
+          padding: clamp(4.5rem, 8vw, 7rem) clamp(1.2rem, 4vw, 4rem) 0;
+          background:
+            radial-gradient(ellipse at 50% 0%, rgba(199, 154, 99, 0.22), transparent 60%),
+            radial-gradient(ellipse at 100% 100%, rgba(182, 126, 66, 0.18), transparent 55%),
+            linear-gradient(180deg, #3a2418 0%, var(--choc) 35%, var(--choc-dark) 100%);
+        }
+
+        /* copper band across the top, like the reference */
+        .connect::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 6px;
+          background: linear-gradient(90deg, transparent, var(--copper-deep), var(--copper), var(--copper-deep), transparent);
+        }
+
+        .connect-inner {
+          position: relative;
+          max-width: 1100px;
+          margin: 0 auto;
+        }
+
+        .connect-eyebrow {
+          margin: 0 0 1rem;
+          font-size: 0.72rem;
+          font-weight: 700;
+          letter-spacing: 0.28em;
+          text-transform: uppercase;
+          color: var(--copper);
+        }
+
+        .connect h2 {
+          margin: 0 0 1rem;
+          font-family: var(--serif, "Cormorant Garamond", Georgia, serif) !important;
+          font-size: clamp(2.8rem, 6.5vw, 5.4rem);
+          line-height: 1;
+          letter-spacing: -0.02em;
+          font-weight: 500;
+          color: var(--cream) !important;
+        }
+
+        .connect-lede {
+          margin: 0 auto 2.4rem;
+          max-width: 52ch;
+          font-size: 1.08rem;
+          line-height: 1.65;
+          color: rgba(245, 236, 224, 0.78);
+        }
+
+        /* ---------- icon strip (like Specialty Coffee / Artisan Brewing) ---------- */
+        .connect-strip {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          max-width: 960px;
+          margin: 0 auto;
+          background: linear-gradient(180deg, #3a2216, #231409);
+          border: 1px solid rgba(199, 154, 99, 0.25);
+          border-radius: 16px;
+          box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45);
+          overflow: hidden;
+        }
+
+        .connect-item {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.7rem;
+          padding: 1.8rem 1rem 1.6rem;
+          color: var(--cream);
+          text-decoration: none;
+          transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .connect-item+.connect-item::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 22%;
+          bottom: 22%;
+          width: 1px;
+          background: rgba(199, 154, 99, 0.25);
+        }
+
+        .connect-item:hover {
+          background: rgba(199, 154, 99, 0.1);
+        }
+
+        .connect-item:hover .connect-ico {
+          transform: translateY(-4px);
+          border-color: var(--copper);
+          color: #fff;
+        }
+
+        .connect-ico {
+          width: 54px;
+          height: 54px;
+          border-radius: 50%;
+          border: 1px solid rgba(199, 154, 99, 0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--copper);
+          transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+
+        .connect-ico svg {
+          width: 24px;
+          height: 24px;
+        }
+
+        .connect-item strong {
+          font-family: var(--serif, Georgia, serif);
+          font-size: 1.25rem;
+          font-weight: 600;
+          letter-spacing: 0.01em;
+        }
+
+        .connect-item small {
+          font-size: 0.78rem;
+          color: rgba(245, 236, 224, 0.6);
+          word-break: break-all;
+          line-height: 1.4;
+        }
+
+        /* ---------- stats row (like 16 / 43 / 100%) ---------- */
+        .connect-stats {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: clamp(1.5rem, 5vw, 4.5rem);
+          margin: 3.2rem auto 2.6rem;
+        }
+
+        .connect-stat {
+          text-align: center;
+        }
+
+        .connect-stat b {
+          display: block;
+          font-family: var(--serif, Georgia, serif);
+          font-size: clamp(2.2rem, 4vw, 3.2rem);
+          font-weight: 600;
+          line-height: 1;
+          color: var(--cream);
+        }
+
+        .connect-stat span {
+          display: block;
+          margin-top: 0.5rem;
+          font-size: 0.72rem;
+          letter-spacing: 0.18em;
+          text-transform: uppercase;
+          color: rgba(245, 236, 224, 0.6);
+        }
+
+        /* ---------- CTA buttons (copper gradient like "Visit Us Today") ---------- */
+        .connect-actions {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 0.9rem;
+        }
+
+        .connect-btn {
+          appearance: none;
+          cursor: pointer;
+          font: inherit;
+          font-size: 0.82rem;
+          font-weight: 700;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          text-decoration: none;
+          padding: 1rem 2.6rem;
+          border-radius: 8px;
+          color: #fff;
+          border: 1px solid transparent;
+          background: linear-gradient(90deg, var(--copper) 0%, var(--copper-deep) 100%);
+          box-shadow: 0 10px 22px rgba(182, 126, 66, 0.32);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .connect-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 14px 28px rgba(182, 126, 66, 0.45);
+        }
+
+        .connect-btn.ghost {
+          background: transparent;
+          color: var(--cream);
+          border-color: rgba(199, 154, 99, 0.5);
+          box-shadow: none;
+        }
+
+        .connect-btn.ghost:hover {
+          background: rgba(199, 154, 99, 0.12);
+          border-color: var(--copper);
+          box-shadow: none;
+        }
+
+        /* ---------- footer strip ---------- */
+        .connect-foot {
+          position: relative;
+          max-width: 1100px;
+          margin: clamp(3rem, 6vw, 4.5rem) auto 0;
+          padding: 1.6rem 0 2rem;
+          border-top: 1px solid rgba(199, 154, 99, 0.2);
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 0.8rem;
+          font-size: 0.82rem;
+          color: rgba(245, 236, 224, 0.5);
+        }
+
+        .connect-foot a {
+          color: var(--copper);
+          text-decoration: none;
+        }
+
+        .connect-foot a:hover {
+          color: #fff;
+        }
+
+        @media (max-width: 760px) {
+          .connect-strip {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          .connect-item:nth-child(3)::before {
+            display: none;
+          }
+
+          .connect-item:nth-child(n+3) {
+            border-top: 1px solid rgba(199, 154, 99, 0.2);
+          }
+
+          .connect-foot {
+            justify-content: center;
+            text-align: center;
+          }
+        }
+      </style>
+
+      <section id="contact" class="connect">
+        <div class="connect-inner">
+
+          <div class="reveal">
+            <p class="connect-eyebrow">Contact</p>
+            <h2>Let's Connect!</h2>
+            <p class="connect-lede">
+              Open to internships, collaborations, and conversations about AI/ML, computer vision and full-stack
+              projects.
+              Drop me a message and I'll get back to you.
+            </p>
+          </div>
+
+          <!-- icon strip -->
+          <div class="connect-strip reveal">
+
+            <a class="connect-item" href="mailto:manyaruhela2005@gmail.com">
+              <span class="connect-ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <polyline points="3,7 12,13 21,7"></polyline>
+                </svg>
+              </span>
+              <strong>Email</strong>
+              <small>drop me a hi!</small>
+            </a>
+
+            <a class="connect-item" href="https://github.com/manyaruhela2005-bit" target="_blank" rel="noreferrer">
+              <span class="connect-ico">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z">
+                  </path>
+                </svg>
+              </span>
+              <strong>GitHub</strong>
+              <small>peek in my repos</small>
+            </a>
+
+            <a class="connect-item" href="https://linkedin.com/in/manyaruhela" target="_blank" rel="noreferrer">
+              <span class="connect-ico">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.69V21h-4z">
+                  </path>
+                </svg>
+              </span>
+              <strong>LinkedIn</strong>
+              <small>let's connect!</small>
+            </a>
+
+            <!-- CHANGE the href to the real path of your resume PDF -->
+            <a class="connect-item" href="assets/ManyaRuhela193.pdf" target="_blank" rel="noreferrer">
+              <span class="connect-ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14,3 14,8 19,8"></polyline>
+                  <line x1="9" y1="13" x2="15" y2="13"></line>
+                  <line x1="9" y1="17" x2="15" y2="17"></line>
+                </svg>
+              </span>
+              <strong>Resume</strong>
+              <small>know more</small>
+            </a>
+
+          </div>
+
+          <!-- stats row -->
+          <div class="connect-stats reveal">
+            <div class="connect-stat"><b>9.58</b><span>CGPA</span></div>
+            <div class="connect-stat"><b>Top 20</b><span>SIH Teams</span></div>
+            <div class="connect-stat"><b>4</b><span>Major Projects</span></div>
+          </div>
+
+          <!-- CTA -->
+        </div>
+
+        <footer class="connect-foot">
+          <span>© 2026 Manya Ruhela · Ghaziabad, India</span>
+          <a href="#">Back to top ↑</a>
+        </footer>
+      </section>
+
+      <script>
+        (function () {
+          var btn = document.getElementById('copyEmailBtn');
+          if (!btn) return;
+          btn.addEventListener('click', function () {
+            var email = 'manyaruhela2005@gmail.com';
+            var done = function () {
+              btn.textContent = 'Copied ✓';
+              setTimeout(function () { btn.textContent = 'Copy Email'; }, 1800);
+            };
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(email).then(done);
+            } else {
+              var t = document.createElement('textarea');
+              t.value = email;
+              document.body.appendChild(t);
+              t.select();
+              document.execCommand('copy');
+              document.body.removeChild(t);
+              done();
+            }
+          });
+        })();
+      </script>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NGO Student Management System — Project</title>
+  <meta name="description"
+    content="NGO Student Management System — A centralized platform for managing student records, attendance, academic performance, and progress. Built with Python, Flask, Tkinter, and MySQL." />
+  <link rel="stylesheet" href="../styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Navigation bar styles (you can move this block into styles.css) -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .project-page .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(26, 16, 10, 0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      z-index: 100;
+    }
+
+    .project-page .main-nav {
+      justify-content: flex-end;
+      gap: clamp(0.7rem, 1.2vw, 1.5rem);
+    }
+
+    .project-page .main-nav a.active {
+      opacity: 1;
+    }
+
+    .project-page .main-nav a.active::after {
+      transform: scaleX(1);
+    }
+
+    .project-page [id] {
+      scroll-margin-top: 90px;
+    }
+
+    .tech-pill {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 900px) {
+      .project-page .main-nav {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        white-space: nowrap;
+        scrollbar-width: none;
+      }
+
+      .project-page .main-nav::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="project-page">
+  <div class="page-shell">
+
+    <!-- ===== NAVIGATION BAR ===== -->
+    <header class="topbar">
+      <div class="brand">Manya Ruhela</div>
+      <nav class="main-nav" id="projNav">
+        <a href="#overview">Overview</a>
+        <a href="#features">Features</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#database">Database</a>
+        <a href="#origin">Real-World Need</a>
+        <a href="#tech">Tech</a>
+        <a href="#contribution">Contribution</a>
+        <a href="#future">Future</a>
+        <a href="../index.html">Home</a>
+      </nav>
+    </header>
+
+    <!-- 1. HERO -->
+    <section class="proj-hero section">
+      <div class="reveal">
+        <p
+          style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.18em; opacity: 0.65; margin-bottom: 0.75rem;">
+          Full-Stack Web Application · Desktop Application</p>
+        <h1>NGO Student Management System</h1>
+        <p class="proj-hero-desc">A centralized platform for managing student records, attendance, academic performance,
+          notes, and progress — built from real student-management needs at an NGO.</p>
+        <div style="margin-bottom: 2rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">Flask</span>
+          <span class="tech-pill">Tkinter</span>
+          <span class="tech-pill">MySQL</span>
+          <span class="tech-pill">HTML</span>
+          <span class="tech-pill">CSS</span>
+          <span class="tech-pill">JavaScript</span>
+        </div>
+        <a href="https://github.com/manyaruhela2005-bit" class="proj-hero-btn" target="_blank"
+          rel="noreferrer">GitHub</a>
+      </div>
+    </section>
+
+    <!-- Overlap Stats -->
+    <div class="proj-overlap">
+      <div class="overlap-card reveal">
+        <span class="icon">Web App</span>
+        <span class="label">Interface</span>
+        <span class="val">Flask + Jinja2</span>
+      </div>
+      <div class="overlap-card reveal">
+        <span class="icon">Desktop</span>
+        <span class="label">Interface</span>
+        <span class="val">Tkinter (Python)</span>
+      </div>
+      <div class="overlap-card reveal">
+        <span class="icon">Database</span>
+        <span class="label">Storage</span>
+        <span class="val">MySQL</span>
+      </div>
+    </div>
+
+    <!-- 2. PROJECT OVERVIEW -->
+    <section id="overview" class="proj-middle section">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Project Overview</h2>
+          <p>The NGO Student Management System is a student-focused management platform that centralizes student
+            information and academic performance tracking. It allows authorized users to manage student records,
+            attendance, notes, grades, and performance information through two interfaces — a Flask-based web
+            application and a Tkinter-based desktop application — both connected to a shared MySQL database.</p>
+        </div>
+
+        <!-- 3. THE REAL-WORLD PROBLEM & 4. THE SOLUTION -->
+        <div class="proj-grid" style="margin-bottom: 4rem;">
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>The Real-World Problem</h3>
+            <p>Manual student tracking creates real organizational challenges:</p>
+            <ul>
+              <li>Difficult to maintain organized student records</li>
+              <li>Inconsistent attendance tracking</li>
+              <li>No centralized place to record test results</li>
+              <li>Notes and academic progress scattered across files</li>
+              <li>No easy way to compare student performance</li>
+              <li>Monitoring progress over time becomes error-prone</li>
+              <li>Retrieving information efficiently is tedious</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>The Solution</h3>
+            <p>The system provides a centralized platform where student information and academic records can be stored
+              and managed:</p>
+            <ul>
+              <li>Centralized student records in a structured database</li>
+              <li>Organized attendance tracking per student</li>
+              <li>Structured grade and test result storage</li>
+              <li>Notes maintained alongside student profiles</li>
+              <li>Performance tracking using marks and averages</li>
+              <li>Secure, authenticated access for authorized users</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 5. KEY FEATURES -->
+        <div id="features" class="proj-middle-header reveal">
+          <h2>Key Features</h2>
+        </div>
+        <div class="proj-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-bottom: 0;">
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>Student Records</h3>
+            <p>Store and manage comprehensive student information including name, age, school status, academic
+              information, test results, and reports.</p>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>Attendance Management</h3>
+            <p>Record and manage student attendance in a structured, consistent, and retrievable manner for each student
+              profile.</p>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>Grades &amp; Test Results</h3>
+            <p>Store individual student test marks and academic results, enabling structured tracking of academic
+              progress over time.</p>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>Notes &amp; Observations</h3>
+            <p>Maintain notes related to individual students and their academic progress, linked directly to their
+              profile.</p>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>Performance Tracking</h3>
+            <p>Track academic performance using marks, averages, and evaluations to monitor each student's growth over
+              time.</p>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>Authentication</h3>
+            <p>Secure login functionality using Flask-Login and Werkzeug password hashing to ensure only authorized
+              users can access the system.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SYSTEM ARCHITECTURE -->
+    <section id="architecture" class="proj-middle section" style="background: #fff;">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>System Architecture</h2>
+          <p>The project ships two distinct application interfaces that share the same MySQL database backend.</p>
+        </div>
+        <div class="proj-grid">
+          <div class="proj-feature-card reveal">
+            <h3>Web Application</h3>
+            <p
+              style="font-family: monospace; font-size: 0.9rem; background: rgba(0,0,0,0.05); padding: 1.2rem 1.5rem; border-radius: 10px; line-height: 2.1; margin-bottom: 1rem; text-align: center;">
+              Browser<br>
+              ↓<br>
+              HTML / CSS / JavaScript<br>
+              ↓<br>
+              Flask<br>
+              ↓<br>
+              Blueprint-based MVC Architecture<br>
+              ↓<br>
+              MySQL<br>
+              ↓<br>
+              Student Data
+            </p>
+            <p>Built with Python 3, Flask, Flask-Login, Jinja2, HTML, CSS, and Vanilla JavaScript.</p>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fdfaf5;">
+            <h3>Desktop Application</h3>
+            <p
+              style="font-family: monospace; font-size: 0.9rem; background: rgba(0,0,0,0.05); padding: 1.2rem 1.5rem; border-radius: 10px; line-height: 2.1; margin-bottom: 1rem; text-align: center;">
+              Tkinter UI<br>
+              ↓<br>
+              MVC-style Application Structure<br>
+              ↓<br>
+              MySQL<br>
+              ↓<br>
+              Student Data
+            </p>
+            <p>Built with Python 3 and Tkinter for local desktop access with the same database layer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. DATABASE DESIGN -->
+    <section id="database" class="proj-middle section">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Database Design</h2>
+          <p>The system uses MySQL (database: <code
+              style="background: rgba(0,0,0,0.06); padding: 0.15em 0.5em; border-radius: 4px; font-size: 0.9em;">ngo</code>)
+            as a relational database. Student information, attendance, notes, grades, and user authentication are
+            separated into structured, interrelated tables.</p>
+        </div>
+        <div class="proj-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+          <div class="proj-feature-card reveal" style="background: #fff; text-align: center;">
+            <h3 style="font-size: 1.1rem;">students</h3>
+            <p style="font-size: 0.88rem; color: #666;">Core student profiles and personal information</p>
+          </div>
+          <div class="proj-feature-card reveal" style="text-align: center;">
+            <h3 style="font-size: 1.1rem;">attendance</h3>
+            <p style="font-size: 0.88rem; color: #666;">Per-student attendance records linked by ID</p>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fff; text-align: center;">
+            <h3 style="font-size: 1.1rem;">notes</h3>
+            <p style="font-size: 0.88rem; color: #666;">Academic and progress notes per student</p>
+          </div>
+          <div class="proj-feature-card reveal" style="text-align: center;">
+            <h3 style="font-size: 1.1rem;">grades</h3>
+            <p style="font-size: 0.88rem; color: #666;">Test marks and academic results per student</p>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fff; text-align: center;">
+            <h3 style="font-size: 1.1rem;">users</h3>
+            <p style="font-size: 0.88rem; color: #666;">Authorized user accounts with hashed passwords</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. STUDENT MANAGEMENT WORKFLOW -->
+    <section id="workflow" class="proj-middle section" style="background: #fff;">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Student Management Workflow</h2>
+        </div>
+        <div class="proj-feature-card reveal" style="background: #fdfaf5; max-width: 680px; margin: 0 auto;">
+          <p
+            style="font-family: monospace; font-size: 0.95rem; background: rgba(0,0,0,0.04); padding: 1.5rem 2rem; border-radius: 10px; line-height: 2.3; text-align: center;">
+            Student<br>
+            ↓<br>
+            Records<br>
+            ↓<br>
+            Attendance<br>
+            ↓<br>
+            Tests / Grades<br>
+            ↓<br>
+            Notes<br>
+            ↓<br>
+            Performance<br>
+            ↓<br>
+            Evaluation
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. APPLICATION SCREENSHOTS (disabled until you add the image)
+    <section class="proj-middle section">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Application Screenshots</h2>
+          <p>Click any image to view it in full screen.</p>
+        </div>
+        <div class="proj-grid" style="grid-template-columns: 1fr;">
+          <div class="proj-img-box reveal" style="cursor: pointer; aspect-ratio: auto;"
+            onclick="openCertLight('../assets/projects/student-management.jpg', 'NGO Student Management System Interface')">
+            <img src="../assets/projects/student-management.jpg" alt="Student Management System Interface" loading="lazy"
+              style="border-radius: 12px; max-height: 500px; object-fit: contain; background: #fff;" />
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- 10. REAL-WORLD EXPERIENCE -->
+    <section id="origin" class="proj-middle section" style="background: #fff;">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Built from Real Student-Management Needs</h2>
+          <p>This system was directly informed by hands-on interaction with students at an NGO/orphanage. The activities
+            carried out during this engagement included:</p>
+        </div>
+        <div class="proj-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+          <div class="proj-feature-card reveal">
+            <h3>Academic Support</h3>
+            <ul>
+              <li>Literacy and syllabus support</li>
+              <li>Doubt-clearing sessions</li>
+              <li>Weekly tests and assessments</li>
+              <li>Performance evaluation</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fdfaf5;">
+            <h3>Student Activities</h3>
+            <ul>
+              <li>Creative activities</li>
+              <li>Extracurricular activities</li>
+              <li>Direct student interaction</li>
+              <li>Student needs identification</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>System Motivation</h3>
+            <p>These direct interactions helped identify the genuine need for structured academic tracking — records,
+              attendance, grades, and notes were being managed manually, making it harder to monitor student growth
+              consistently. The system was built to address these real organizational challenges.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. TECHNOLOGY STACK -->
+    <section id="tech" class="proj-middle section">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Technology Stack</h2>
+        </div>
+        <div class="proj-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>Web Application</h3>
+            <ul>
+              <li>Python 3</li>
+              <li>Flask</li>
+              <li>Flask-Login</li>
+              <li>Jinja2</li>
+              <li>HTML, CSS, Vanilla JavaScript</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>Desktop Application</h3>
+            <ul>
+              <li>Python 3</li>
+              <li>Tkinter</li>
+              <li>MVC-style architecture</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>Database</h3>
+            <ul>
+              <li>MySQL</li>
+              <li>phpMyAdmin</li>
+              <li>mysql-connector-python</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>Security</h3>
+            <ul>
+              <li>Werkzeug password hashing</li>
+              <li>Flask-Login session management</li>
+              <li>Authorized access control</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. MY CONTRIBUTION -->
+    <section id="contribution" class="proj-middle section" style="background: #fff;">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>My Contribution</h2>
+        </div>
+        <div class="proj-grid">
+          <div class="proj-feature-card reveal">
+            <h3>Development</h3>
+            <ul>
+              <li>Designed and developed the full student management system</li>
+              <li>Implemented the Flask-based web application with Blueprint-based MVC architecture</li>
+              <li>Implemented the Tkinter desktop application</li>
+              <li>Designed and implemented the MySQL database schema</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fdfaf5;">
+            <h3>Features &amp; Integration</h3>
+            <ul>
+              <li>Implemented student records, attendance, grades, and notes modules</li>
+              <li>Built performance tracking and student comparison functionality</li>
+              <li>Implemented secure authentication with Flask-Login and Werkzeug</li>
+              <li>Connected both applications to the MySQL database</li>
+              <li>Tested and debugged the complete system</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. PROJECT OUTCOME -->
+    <section id="outcome" class="proj-middle section">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Project Outcome</h2>
+          <p>The system provides a centralized, organized platform for academic record management that addresses the
+            real challenges of manual student tracking. It demonstrates practical knowledge of full-stack Python
+            development, relational database design, dual-interface application development (web + desktop),
+            authentication, and MVC architecture.</p>
+        </div>
+        <div class="proj-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>What It Delivers</h3>
+            <ul>
+              <li>Maintain organized student records</li>
+              <li>Consistent attendance tracking</li>
+              <li>Structured academic result storage</li>
+              <li>Per-student notes and observations</li>
+              <li>Performance evaluation and comparison</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>What It Demonstrates</h3>
+            <ul>
+              <li>Full-stack Python web development (Flask)</li>
+              <li>Desktop application development (Tkinter)</li>
+              <li>MySQL relational database design</li>
+              <li>MVC-style application architecture</li>
+              <li>Authentication and session management</li>
+              <li>Real-world problem-driven system design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. FUTURE SCOPE -->
+    <section id="future" class="proj-middle section" style="background: #fff;">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Future Scope</h2>
+          <p>The following are possible future improvements that are not currently implemented in the system.</p>
+        </div>
+        <div class="proj-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+          <div class="proj-feature-card reveal">
+            <ul>
+              <li>Parent/guardian access and progress visibility</li>
+              <li>Automated student progress reports</li>
+              <li>More advanced analytics and visualizations</li>
+              <li>Notifications and reminders</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fdfaf5;">
+            <ul>
+              <li>Student-specific learning plans</li>
+              <li>Cloud deployment for remote access</li>
+              <li>Mobile application support</li>
+              <li>Role-specific dashboards and automated report generation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="proj-footer-section section">
+      <div class="proj-footer-cta reveal">
+        <a href="../index.html" class="proj-footer-btn">← Back to Portfolio</a>
+      </div>
+    </section>
+
+  </div><!-- /page-shell -->
+
+  <!-- ===== IMAGE LIGHTBOX ===== -->
+  <div id="certLightbox" class="cert-lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="cert-lightbox__backdrop" onclick="closeCertLight()" style="position:fixed; inset:0;"></div>
+    <div class="cert-lightbox__inner">
+      <button class="cert-lightbox__close" onclick="closeCertLight()" aria-label="Close">×</button>
+      <img id="certLightboxImg" src="" alt="" />
+      <p id="certLightboxTitle" class="cert-lightbox__title"></p>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+
+  <!-- Active-section highlight for the nav bar -->
+  <script>
+    (function () {
+      var items = [];
+      document.querySelectorAll('#projNav a[href^="#"]').forEach(function (a) {
+        var el = document.querySelector(a.getAttribute('href'));
+        if (el) items.push({ a: a, el: el });
+      });
+      function spy() {
+        var current = null;
+        items.forEach(function (it) {
+          if (it.el.getBoundingClientRect().top <= 140) current = it;
+        });
+        items.forEach(function (it) {
+          it.a.classList.toggle('active', it === current);
+        });
+      }
+      window.addEventListener('scroll', spy, { passive: true });
+      spy();
+    })();
+  </script>
+</body>
+
+</html>

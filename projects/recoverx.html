@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RecoverX — Dynamic Delivery Recovery</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Navigation bar styles (you can move this block into styles.css) -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .project-page .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(26, 16, 10, 0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      z-index: 100;
+    }
+
+    .project-page .main-nav {
+      justify-content: flex-end;
+      gap: clamp(0.7rem, 1.2vw, 1.5rem);
+    }
+
+    .project-page .main-nav a.active {
+      opacity: 1;
+    }
+
+    .project-page .main-nav a.active::after {
+      transform: scaleX(1);
+    }
+
+    .project-page [id] {
+      scroll-margin-top: 90px;
+    }
+
+    .tech-pill {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 900px) {
+      .project-page .main-nav {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        white-space: nowrap;
+        scrollbar-width: none;
+      }
+
+      .project-page .main-nav::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="project-page">
+  <div class="page-shell">
+
+    <!-- ===== NAVIGATION BAR ===== -->
+    <header class="topbar">
+      <div class="brand">Manya Ruhela</div>
+      <nav class="main-nav" id="projNav">
+        <a href="#overview">Overview</a>
+        <a href="#how">How It Works</a>
+        <a href="#features">Highlights</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#engine">AI &amp; Optimization</a>
+        <a href="#testing">Testing</a>
+        <a href="#outlook">Contribution</a>
+        <a href="../index.html">Home</a>
+      </nav>
+    </header>
+
+    <!-- 1. HERO -->
+    <section class="proj-hero section">
+      <div class="reveal">
+        <h1>RecoverX</h1>
+        <p class="proj-hero-desc">An AI-assisted optimization system that turns failed deliveries into actionable
+          recovery plans.</p>
+        <div style="margin-bottom: 2rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+          <span class="tech-pill">React</span>
+          <span class="tech-pill">FastAPI</span>
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">OR-Tools</span>
+          <span class="tech-pill">scikit-learn</span>
+        </div>
+        <a href="https://github.com/manyaruhela2005-bit" class="proj-hero-btn" target="_blank"
+          rel="noreferrer">GitHub</a>
+      </div>
+    </section>
+
+    <!-- 2. PROJECT OVERVIEW -->
+    <section id="overview" class="proj-middle section">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Project Overview</h2>
+          <p>RecoverX is an optimization-based delivery recovery system designed to intelligently handle failed or
+            disrupted deliveries. Developed by team "Little Coders," the project integrates Full-Stack development,
+            AI/ML, and Optimization to convert a delivery disruption into a practical recovery recommendation.</p>
+        </div>
+
+        <!-- 3. THE PROBLEM & 4. THE SOLUTION -->
+        <div class="proj-grid" style="margin-bottom: 4rem;">
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>The Problem</h3>
+            <p>When a delivery fails (due to customer/rider unavailability, vehicle breakdown, or traffic), manually
+              deciding what to do next leads to:</p>
+            <ul>
+              <li>Increased delivery delays &amp; additional travel distance</li>
+              <li>Higher recovery costs</li>
+              <li>Poor rider utilization</li>
+              <li>Missed time windows</li>
+              <li>Inefficient reassignment</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>The Solution</h3>
+            <p>RecoverX solves this by automatically analyzing the current situation and generating optimized recovery
+              plans. The system evaluates strategies such as:</p>
+            <ul>
+              <li>Reassigning delivery to another rider</li>
+              <li>Rescheduling delivery</li>
+              <li>Rerouting the delivery</li>
+              <li>Selecting alternative feasible recovery options based on constraints and impact</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 5. HOW IT WORKS -->
+        <div id="how" class="proj-middle-header reveal" style="margin-top: 4rem;">
+          <h2>How It Works</h2>
+          <p>The system actively evaluates disruptions through a structured recovery workflow.</p>
+        </div>
+        <div class="proj-grid" style="grid-template-columns: 1fr;">
+          <div class="proj-feature-card reveal" style="background: #fdfaf5; text-align: center;">
+            <p style="font-family: var(--mono, monospace); font-size: 1rem; line-height: 2;">
+              <strong>Delivery Disruption</strong><br>
+              ↓<br>
+              Collect Order + Rider Data<br>
+              ↓<br>
+              Check Availability &amp; Constraints<br>
+              ↓<br>
+              Generate Feasible Recovery Options<br>
+              ↓<br>
+              Optimization Engine<br>
+              ↓<br>
+              Evaluate Recovery Impact<br>
+              ↓<br>
+              <strong>Recommend Best Action</strong><br>
+              ↓<br>
+              Update Rider / Order / Dashboard
+            </p>
+          </div>
+        </div>
+
+        <!-- 6. KEY FEATURES -->
+        <div id="features" class="proj-middle-header reveal" style="margin-top: 6rem;">
+          <h2>Key Highlights</h2>
+        </div>
+        <div class="proj-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>AI-Assisted Recovery</h3>
+            <p>Uses machine learning models to support recovery decision-making by predicting classification and
+              numerical impact of different choices.</p>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>Constraint-Aware Planning</h3>
+            <p>Strictly checks rider availability, capacity, delivery time windows, and feasibility constraints before
+              generating any recovery option.</p>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>Optimization with OR-Tools</h3>
+            <p>Leverages Google OR-Tools to evaluate delivery recovery plans under constraints, ensuring the
+              recommendation is the most practically sound choice.</p>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>Traffic-Aware Routing</h3>
+            <p>Uses Haversine distance alongside dynamic traffic multipliers to estimate a realistic travel and delay
+              impact.</p>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>Explainable Recommendations</h3>
+            <p>The system explicitly explains <em>why</em> a particular recovery option was recommended, rather than
+              simply presenting a black-box prediction.</p>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>Real-Time API Architecture</h3>
+            <p>Uses a FastAPI REST backend to process recovery events and update relevant rider, order, and dashboard
+              information dynamically.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. SYSTEM ARCHITECTURE -->
+    <section id="architecture" class="proj-middle section" style="background: #fff;">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>System Architecture</h2>
+        </div>
+        <div class="proj-grid">
+          <div class="proj-feature-card reveal">
+            <p
+              style="font-family: var(--mono, monospace); font-size: 0.95rem; background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 8px; text-align: center; line-height: 1.7;">
+              React + Vite Frontend<br>
+              ↓<br>
+              FastAPI REST API<br>
+              ↓<br>
+              Recovery / Decision Layer<br>
+              ↓<br>
+              ML Models + Optimization Engine<br>
+              ↓<br>
+              Recovery Recommendation<br>
+              ↓<br>
+              Updated Order / Rider / Dashboard
+            </p>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fdfaf5;">
+            <h3>Layer Roles</h3>
+            <ul>
+              <li><strong>Frontend:</strong> Provides the delivery monitoring interface and centralized Recovery Centre
+                for review.</li>
+              <li><strong>Backend:</strong> Handles API requests, validation, business logic, and recovery engine
+                communication.</li>
+              <li><strong>ML Layer:</strong> Uses Random Forest models to support recovery-related predictions.</li>
+              <li><strong>Optimization Layer:</strong> Evaluates feasible recovery plans under strict delivery
+                constraints.</li>
+              <li><strong>Recommendation Layer:</strong> Combines feasibility and recovery impact to produce an
+                actionable recommendation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. AI + OPTIMIZATION -->
+    <section id="engine" class="proj-middle section">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>AI &amp; Optimization Engine</h2>
+          <p>RecoverX integrates predictive machine learning with deterministic optimization algorithms.</p>
+        </div>
+        <div class="proj-grid">
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>Machine Learning Component</h3>
+            <p>RecoverX relies on scikit-learn's Random Forest models for data-driven decision support.</p>
+            <ul>
+              <li><strong>Random Forest Classifier:</strong> Used for classification-related recovery decisions and
+                determining option viability based on historical patterns.</li>
+              <li><strong>Random Forest Regressor:</strong> Used for numerical predictions related to recovery impact
+                and estimated delays.</li>
+            </ul>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">The ML component acts as a supportive layer to
+              guide the optimization process toward the most historically successful recovery strategies.</p>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>Google OR-Tools Optimization</h3>
+            <p>OR-Tools is utilized to evaluate delivery recovery options deterministically while adhering to physical
+              constraints.</p>
+            <p>The optimization engine accounts for:</p>
+            <ul>
+              <li>Delivery delay and additional distance</li>
+              <li>Rider availability and vehicle capacity</li>
+              <li>Strict time windows and feasibility metrics</li>
+            </ul>
+            <p style="margin-top: 1rem;"><strong>The goal is to find a practical, mathematically verified recovery plan
+                rather than just making an isolated prediction.</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. RECOVERY CENTRE / UI SCREENSHOTS (disabled until you add the image)
+    <section class="proj-middle section" style="background: #fff;">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Recovery Centre Interface</h2>
+          <p>Click on the image to view the full-screen interface.</p>
+        </div>
+        <div class="proj-grid" style="grid-template-columns: 1fr;">
+          <div class="proj-img-box reveal" style="cursor: pointer; aspect-ratio: auto;"
+            onclick="openCertLight('../assets/projects/recoverx.jpg', 'RecoverX Interface')">
+            <img src="../assets/projects/recoverx.jpg" alt="RecoverX Interface" loading="lazy"
+              style="border-radius: 12px; max-height: 500px; object-fit: contain; background: #fff;" />
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- 10. TESTING & 11. CHALLENGES -->
+    <section id="testing" class="proj-middle section">
+      <div class="proj-middle-container">
+        <div class="proj-grid">
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>Testing &amp; Reliability</h3>
+            <p>System stability is paramount when handling active deliveries. Our testing approach includes:</p>
+            <ul>
+              <li><strong>Pytest Framework:</strong> Automated testing pipeline.</li>
+              <li><strong>20 Unit Tests:</strong> Ensuring individual functions process constraints correctly.</li>
+              <li><strong>3 Integration Scenarios:</strong> Full end-to-end testing of the disruption-to-recovery
+                workflow.</li>
+              <li><strong>Rule-Based Fallback:</strong> A critical failsafe mechanism ensuring the system can still
+                produce a viable recovery decision when the ML or optimization paths are unavailable or fail to
+                converge.</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>Challenges</h3>
+            <ul>
+              <li>Handling multiple recovery constraints simultaneously without failing.</li>
+              <li>Algorithmically choosing between several closely competing recovery actions.</li>
+              <li>Effectively combining ML predictions with deterministic optimization.</li>
+              <li>Accurately incorporating dynamic distance and traffic impacts.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. FUTURE SCOPE & 14. MY CONTRIBUTION & 15. TECHNOLOGY STACK -->
+    <section id="outlook" class="proj-middle section" style="background: #fff;">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Looking Forward</h2>
+        </div>
+        <div class="proj-grid">
+          <div class="proj-feature-card reveal">
+            <h3>Future Scope</h3>
+            <ul>
+              <li>Real-time delivery platform integration and live GPS tracking.</li>
+              <li>Integration with real-time traffic APIs.</li>
+              <li>Dynamic rider availability modeling.</li>
+              <li>Reinforcement learning algorithms for adaptive, self-improving recovery.</li>
+              <li>Training models on real-world historical delivery datasets.</li>
+              <li>Cloud deployment and real-time push notifications to riders.</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fdfaf5;">
+            <h3>My Contribution &amp; Tech Stack</h3>
+            <p><strong>Technologies Used:</strong> React, Vite, Tailwind CSS, Python, FastAPI, Pydantic, scikit-learn,
+              Google OR-Tools, Pytest.</p>
+            <p style="margin-top: 1rem;"><strong>My Contribution:</strong></p>
+            <p>I played a critical role in bringing RecoverX to life, focusing on:</p>
+            <ul>
+              <li>Full-stack application development tying the interface to the analytical engine.</li>
+              <li>Frontend/backend integration and designing the FastAPI REST APIs.</li>
+              <li>Structuring the overarching recovery workflow logic.</li>
+              <li>Database and synthetic data handling for model validation.</li>
+              <li>Assisting with the integration of ML and Google OR-Tools optimization logic.</li>
+              <li>Writing Pytest coverage and debugging the workflow fallback mechanisms.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 16. FINAL CTA -->
+    <section class="proj-footer-section section">
+      <div class="proj-footer-cta reveal">
+        <a href="../index.html" class="proj-footer-btn">← Back to Portfolio</a>
+      </div>
+    </section>
+
+  </div><!-- /page-shell -->
+
+  <!-- ===== IMAGE LIGHTBOX ===== -->
+  <div id="certLightbox" class="cert-lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="cert-lightbox__backdrop" onclick="closeCertLight()" style="position:fixed; inset:0;"></div>
+    <div class="cert-lightbox__inner">
+      <button class="cert-lightbox__close" onclick="closeCertLight()" aria-label="Close">×</button>
+      <img id="certLightboxImg" src="" alt="" />
+      <p id="certLightboxTitle" class="cert-lightbox__title"></p>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+
+  <!-- Active-section highlight for the nav bar -->
+  <script>
+    (function () {
+      var items = [];
+      document.querySelectorAll('#projNav a[href^="#"]').forEach(function (a) {
+        var el = document.querySelector(a.getAttribute('href'));
+        if (el) items.push({ a: a, el: el });
+      });
+      function spy() {
+        var current = null;
+        items.forEach(function (it) {
+          if (it.el.getBoundingClientRect().top <= 140) current = it;
+        });
+        items.forEach(function (it) {
+          it.a.classList.toggle('active', it === current);
+        });
+      }
+      window.addEventListener('scroll', spy, { passive: true });
+      spy();
+    })();
+  </script>
+</body>
+
+</html>

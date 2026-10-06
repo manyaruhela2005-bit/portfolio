@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Perimeter Surveillance — Project</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Navigation bar styles (you can move this block into styles.css) -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .project-page .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(26, 16, 10, 0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      z-index: 100;
+    }
+
+    .project-page .main-nav {
+      justify-content: flex-end;
+      gap: clamp(0.7rem, 1.2vw, 1.5rem);
+    }
+
+    .project-page .main-nav a.active {
+      opacity: 1;
+    }
+
+    .project-page .main-nav a.active::after {
+      transform: scaleX(1);
+    }
+
+    .project-page [id] {
+      scroll-margin-top: 90px;
+    }
+
+    .tech-pill {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 900px) {
+      .project-page .main-nav {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        white-space: nowrap;
+        scrollbar-width: none;
+      }
+
+      .project-page .main-nav::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body class="project-page">
+  <div class="page-shell">
+
+    <!-- ===== NAVIGATION BAR ===== -->
+    <header class="topbar">
+      <div class="brand">Manya Ruhela</div>
+      <nav class="main-nav" id="projNav">
+        <a href="#overview">Overview</a>
+        <a href="#how">How It Works</a>
+        <a href="#features">Features</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#alerts">Alerts &amp; Rules</a>
+        <a href="#tech">Tech</a>
+        <a href="#outlook">Contribution</a>
+        <a href="../index.html">Home</a>
+      </nav>
+    </header>
+
+    <!-- 1. HERO -->
+    <section class="proj-hero section">
+      <div class="reveal">
+        <h1>AI-Powered Perimeter Surveillance</h1>
+        <p class="proj-hero-desc">Turning traditional CCTV into intelligent, event-driven security.</p>
+        <div style="margin-bottom: 2rem; display: flex; flex-wrap: wrap; gap: 0.5rem;">
+          <span class="tech-pill">YOLOv8</span>
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">FastAPI</span>
+          <span class="tech-pill">React</span>
+          <span class="tech-pill">PostgreSQL</span>
+          <span class="tech-pill">Docker</span>
+        </div>
+        <a href="https://github.com/manyaruhela2005-bit" class="proj-hero-btn" target="_blank"
+          rel="noreferrer">GitHub</a>
+      </div>
+    </section>
+
+    <!-- 2. PROJECT OVERVIEW -->
+    <section id="overview" class="proj-middle section">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Project Overview</h2>
+          <p>Developed for the Smart India Hackathon (SIH) under Team "BOT DRAGONS", this project transforms traditional
+            CCTV infrastructure into an intelligent surveillance platform. It is designed for perimeter and
+            restricted-area security where continuous manual CCTV monitoring is inefficient and security personnel need
+            immediate awareness of important events.</p>
+        </div>
+
+        <!-- 3. THE PROBLEM & 4. THE SOLUTION -->
+        <div class="proj-grid" style="margin-bottom: 4rem;">
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>The Problem</h3>
+            <p>Traditional CCTV systems primarily record video and depend heavily on human operators. Key problems
+              include:</p>
+            <ul>
+              <li>Continuous manual monitoring is exhausting and error-prone.</li>
+              <li>Important incidents can be missed or suspicious activity detected too late.</li>
+              <li>Monitoring multiple cameras rapidly increases operator workload.</li>
+              <li>Traditional CCTV does not automatically understand events.</li>
+              <li>Night-time conditions severely degrade manual monitoring.</li>
+              <li>Collecting incident evidence manually consumes critical time.</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>The Solution</h3>
+            <ul>
+              <li>Adds an AI intelligence layer to existing CCTV infrastructure</li>
+              <li>Automatically analyzes live video feeds</li>
+              <li>Understands spatial events and activities</li>
+              <li>Detects and highlights important security incidents</li>
+              <li>Reduces the need for continuous manual monitoring</li>
+              <li>Provides real-time security alerts</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 5. HOW IT WORKS -->
+        <div id="how" class="proj-middle-header reveal" style="margin-top: 4rem;">
+          <h2>How It Works</h2>
+          <p>The core pipeline converts unstructured video streams into actionable alerts.</p>
+        </div>
+        <div class="proj-grid" style="grid-template-columns: 1fr;">
+          <div class="proj-feature-card reveal" style="background: #fdfaf5; text-align: center;">
+            <p style="font-family: var(--mono, monospace); font-size: 1rem; line-height: 2; text-align: center;">
+              <strong>CCTV / IP CAMERA</strong><br>
+              ↓<br>
+              VIDEO STREAM<br>
+              ↓<br>
+              <strong>AI COMPUTER VISION</strong><br>
+              ↓<br>
+              OBJECT / FACE / VEHICLE DETECTION<br>
+              ↓<br>
+              TRACKING + ZONE ANALYSIS<br>
+              ↓<br>
+              EVENT / ANOMALY DETECTION<br>
+              ↓<br>
+              <strong>ALERT GENERATION</strong><br>
+              ↓<br>
+              INCIDENT EVIDENCE + EVENT LOG<br>
+              ↓<br>
+              <strong>SECURITY RESPONSE</strong>
+            </p>
+          </div>
+        </div>
+
+        <!-- 6. KEY FEATURES -->
+        <div id="features" class="proj-middle-header reveal" style="margin-top: 6rem;">
+          <h2>Key Surveillance Features</h2>
+        </div>
+        <div class="proj-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>Human Detection &amp; Tracking</h3>
+            <p>Detects people entering monitored areas and tracks their movement continuously across the camera feed
+              using YOLOv8 and ByteTrack.</p>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>Face Recognition</h3>
+            <p>Detects and recognizes faces dynamically to support watchlist-based security alerts for known, unknown,
+              or blacklisted individuals.</p>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>ANPR &amp; Vehicles</h3>
+            <p>Automatically detects vehicles, classifies them, and reads license plates for comprehensive access
+              control.</p>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>Virtual Fence &amp; Zones</h3>
+            <p>Allows operators to create polygon-based restricted zones directly on the video feed to instantly detect
+              unauthorized entry or loitering.</p>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>Suspicious Activity</h3>
+            <p>Intelligently flags intrusion, loitering, crowd formation, tailgating, wrong direction movement, and
+              objects left behind.</p>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>Real-Time Alerts &amp; Evidence</h3>
+            <p>Generates immediate alerts via In-app, WebSocket, Email, or Webhooks, complete with screenshots,
+              timestamps, and severity levels.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. SYSTEM ARCHITECTURE & 8. COMPUTER VISION PIPELINE -->
+    <section id="architecture" class="proj-middle section" style="background: #fff;">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>System Architecture &amp; AI Pipeline</h2>
+        </div>
+        <div class="proj-grid">
+          <div class="proj-feature-card reveal">
+            <h3>Technical Architecture</h3>
+            <p
+              style="font-family: var(--mono, monospace); font-size: 0.95rem; background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 8px; text-align: center; line-height: 1.7;">
+              CAMERA / CCTV<br>
+              ↓<br>
+              RTSP / HLS STREAM<br>
+              ↓<br>
+              MEDIAMTX<br>
+              ↓<br>
+              COMPUTER VISION PIPELINE<br>
+              ↓<br>
+              EVENT / RULE ENGINE<br>
+              ↓<br>
+              FASTAPI BACKEND<br>
+              ↓<br>
+              POSTGRESQL + REDIS + MINIO<br>
+              ↓<br>
+              NEXT.JS DASHBOARD<br>
+              ↓<br>
+              REAL-TIME ALERTS
+            </p>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fdfaf5;">
+            <h3>Computer Vision Pipeline</h3>
+            <p
+              style="font-family: var(--mono, monospace); font-size: 0.95rem; background: rgba(0,0,0,0.05); padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; text-align: center; line-height: 1.7;">
+              Video Frame<br>
+              ↓<br>
+              Object Detection<br>
+              ↓<br>
+              Tracking<br>
+              ↓<br>
+              Face / Vehicle Analysis<br>
+              ↓<br>
+              Zone &amp; Rule Analysis<br>
+              ↓<br>
+              Event Detection<br>
+              ↓<br>
+              Alert
+            </p>
+            <p style="font-size: 1rem; line-height: 1.7;">
+              The system employs a multi-stage AI layer. YOLOv8 processes object detection, which feeds into
+              ByteTrack/SORT for temporal persistence. This data intersects with spatial polygons in the Rule Engine to
+              flag breaches, while Redis handles real-time alert broadcasts to the Next.js frontend.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. ALERT & EVENT SYSTEM -->
+    <section id="alerts" class="proj-middle section">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Alerts, Security Rules &amp; Administration</h2>
+        </div>
+        <div class="proj-grid">
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>Event Lifecycle: Intrusion</h3>
+            <p
+              style="font-family: var(--mono, monospace); font-size: 0.95rem; color: #b67e42; font-weight: 600; line-height: 1.8;">
+              1. Person enters restricted zone<br>
+              2. YOLOv8 detects person<br>
+              3. Tracking identifies movement vector<br>
+              4. Virtual fence rule is triggered<br>
+              5. Severity assigned (e.g. Critical)<br>
+              6. Alert generated<br>
+              7. Screenshot + timestamp stored in DB<br>
+              8. Operator receives real-time alert UI pop-up
+            </p>
+            <p style="margin-top: 1rem;">Alerts are assigned one of five severity levels (Critical, High, Medium, Low,
+              Info) and include configurable cooldowns to prevent alarm fatigue.</p>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>Security Rules &amp; Management</h3>
+            <p>The system supports 22 configurable detection rules encompassing:</p>
+            <ul>
+              <li><strong>Security:</strong> Intrusion, Loitering, Tailgating, Objects left/removed.</li>
+              <li><strong>Counting &amp; Occupancy:</strong> Line crossing, threshold breaches.</li>
+              <li><strong>Face &amp; Vehicle:</strong> Blacklisted detection, Speed, Illegal parking.</li>
+              <li><strong>Safety:</strong> PPE violations, Fire/smoke, Fall detection.</li>
+            </ul>
+            <p style="margin-top: 1rem;">Administrators maintain full control via Role-Based Access (Viewer to Super
+              Admin), allowing dynamic zone configuration, API key management, and comprehensive PDF/CSV audit reports.
+              An advanced natural-language AI Copilot (powered by Claude) provides contextual querying of this
+              surveillance data.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. DASHBOARD / PROJECT SCREENSHOTS (disabled until you add the image)
+    <section class="proj-middle section" style="background: #fff;">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Dashboard &amp; Interfaces</h2>
+          <p>Click on the image to view the full-screen interface.</p>
+        </div>
+        <div class="proj-grid" style="grid-template-columns: 1fr;">
+          <div class="proj-img-box reveal" style="cursor: pointer; aspect-ratio: auto;"
+            onclick="openCertLight('../assets/projects/border-surveillance.jpg', 'Surveillance System Dashboard')">
+            <img src="../assets/projects/border-surveillance.jpg" alt="Border Surveillance Dashboard" loading="lazy"
+              style="border-radius: 12px; max-height: 500px; object-fit: contain; background: #000;" />
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- 11. TECH STACK, 12. CHALLENGES & 13. LIMITATIONS -->
+    <section id="tech" class="proj-middle section">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Technology &amp; Challenges</h2>
+        </div>
+        <div class="proj-grid">
+          <div class="proj-feature-card reveal" style="background: #fff;">
+            <h3>Technology Stack</h3>
+            <ul>
+              <li><strong>Computer Vision:</strong> Python, YOLOv8, OpenCV, RetinaFace, ArcFace, PaddleOCR, ByteTrack.
+              </li>
+              <li><strong>Frontend:</strong> Next.js, React, TypeScript, Tailwind CSS, Zustand, HLS.js.</li>
+              <li><strong>Backend:</strong> FastAPI, Python, WebSockets.</li>
+              <li><strong>Infrastructure:</strong> PostgreSQL, Redis, MinIO, MediaMTX, Docker.</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal">
+            <h3>Challenges</h3>
+            <p><strong>Engineering Challenges:</strong></p>
+            <ul>
+              <li>Processing multiple video streams concurrently while maintaining real-time inference.</li>
+              <li>Tracking objects persistently across frames and varying lighting conditions.</li>
+              <li>Integrating heavy AI inference with live low-latency video streaming.</li>
+              <li>Managing camera connectivity and MediaMTX health.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. FUTURE SCOPE, 15. MY CONTRIBUTION & 16. FINAL PROJECT OUTCOME -->
+    <section id="outlook" class="proj-middle section" style="background: #fff;">
+      <div class="proj-middle-container">
+        <div class="proj-middle-header reveal">
+          <h2>Looking Forward</h2>
+        </div>
+        <div class="proj-grid">
+          <div class="proj-feature-card reveal">
+            <h3>Future Scope</h3>
+            <ul>
+              <li>Edge AI hardware deployment.</li>
+              <li>Improved night vision models and thermal-camera integration.</li>
+              <li>Multi-camera person re-identification (Re-ID).</li>
+              <li>Cloud/edge hybrid architectures and mobile security alerts.</li>
+              <li>Integration with physical security command centers.</li>
+              <li>Advanced incident replay and predictive security analytics.</li>
+            </ul>
+          </div>
+          <div class="proj-feature-card reveal" style="background: #fdfaf5;">
+            <h3>My Contribution</h3>
+            <p>As a key developer on the "BOT DRAGONS" team, my focus was on:</p>
+            <ul>
+              <li>Developing the Computer Vision pipeline and integrating YOLOv8.</li>
+              <li>Managing CCTV/IP camera integrations via MediaMTX.</li>
+              <li>Implementing real-time event processing and tracking logic.</li>
+              <li>Designing the real-time Alert System and Backend-Frontend data flow.</li>
+              <li>Deploying the stack using Dockerized infrastructure.</li>
+              <li>Extensive pipeline testing and video stream debugging.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="proj-grid" style="margin-top: 3rem; grid-template-columns: 1fr;">
+          <div class="proj-feature-card reveal" style="background: #fff; text-align: center;">
+            <h3>Final Project Outcome</h3>
+            <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto; line-height: 1.6; text-align: left;">
+              The solution successfully demonstrates its core innovation: achieving compatibility with existing CCTV
+              infrastructure while layering on multi-feature AI. By adopting an event-driven surveillance methodology,
+              the system severely reduces operator workload and highlights only meaningful security events. <strong>It
+                transforms traditional CCTV into an intelligent surveillance system that detects, understands, and
+                responds to security events in real time.</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="proj-footer-section section">
+      <div class="proj-footer-cta reveal">
+        <a href="../index.html" class="proj-footer-btn">← Back to Portfolio</a>
+      </div>
+    </section>
+
+  </div><!-- /page-shell -->
+
+  <!-- ===== IMAGE LIGHTBOX ===== -->
+  <div id="certLightbox" class="cert-lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="cert-lightbox__backdrop" onclick="closeCertLight()" style="position:fixed; inset:0;"></div>
+    <div class="cert-lightbox__inner">
+      <button class="cert-lightbox__close" onclick="closeCertLight()" aria-label="Close">×</button>
+      <img id="certLightboxImg" src="" alt="" />
+      <p id="certLightboxTitle" class="cert-lightbox__title"></p>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+
+  <!-- Active-section highlight for the nav bar -->
+  <script>
+    (function () {
+      var items = [];
+      document.querySelectorAll('#projNav a[href^="#"]').forEach(function (a) {
+        var el = document.querySelector(a.getAttribute('href'));
+        if (el) items.push({ a: a, el: el });
+      });
+      function spy() {
+        var current = null;
+        items.forEach(function (it) {
+          if (it.el.getBoundingClientRect().top <= 140) current = it;
+        });
+        items.forEach(function (it) {
+          it.a.classList.toggle('active', it === current);
+        });
+      }
+      window.addEventListener('scroll', spy, { passive: true });
+      spy();
+    })();
+  </script>
+</body>
+
+</html>

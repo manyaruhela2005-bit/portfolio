@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Other Certificates — Manya Ruhela</title>
+
+    <!-- This file lives in: assets/other Certs/oc.html -->
+    <link rel="stylesheet" href="../../styles.css" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /* Page-specific tweaks: 3-column grid + captions */
+        .oc-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.6rem;
+        }
+
+        .oc-card {
+            position: relative;
+            cursor: pointer;
+            aspect-ratio: 4 / 3;
+            border: 1px solid var(--line);
+            transition: transform 0.35s cubic-bezier(.22, 1, .36, 1), box-shadow 0.35s ease;
+        }
+
+        .oc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 36px rgba(20, 18, 16, 0.14);
+        }
+
+        .oc-card img {
+            transition: transform 0.6s cubic-bezier(.2, .8, .2, 1);
+        }
+
+        .oc-card:hover img {
+            transform: scale(1.04);
+        }
+
+        .oc-card .cert-name {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 2.2rem 1.2rem 1rem;
+            color: #fff;
+            font-family: var(--serif);
+            font-size: 1.15rem;
+            font-weight: 600;
+            background: linear-gradient(to top, rgba(35, 24, 18, 0.92), rgba(35, 24, 18, 0));
+        }
+
+        @media (max-width: 900px) {
+            .oc-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 580px) {
+            .oc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body class="project-page">
+
+    <div class="page-shell">
+
+        <!-- ===== HEADER ===== -->
+        <header class="topbar" style="position: sticky; background: rgba(244, 242, 236, 0.85); color: var(--charcoal);">
+            <div class="brand" style="color: var(--charcoal);">Manya Ruhela</div>
+
+            <nav class="main-nav">
+                <a href="../../index.html" style="color: var(--deep-brown);">Home</a>
+            </nav>
+        </header>
+
+
+        <!-- ===== CERTIFICATES SECTION ===== -->
+        <section class="proj-middle section" style="background: #fff; margin-top: 0; padding-top: 5rem;">
+            <div class="proj-middle-container">
+
+                <div class="proj-middle-header reveal">
+                    <p class="eyebrow">Collection</p>
+                    <h2>Other Certificates</h2>
+                    <p>Workshops, assessments and hackathon participation. Click any certificate to view it full size.
+                    </p>
+                </div>
+
+                <div class="oc-grid">
+
+                    <!-- 1 -->
+                    <div class="proj-img-box oc-card reveal"
+                        onclick="openOcLight('HCL GUVI Certification - 2y03tz102Ak2K767j7.png', 'HCL GUVI Certification')">
+                        <img src="HCL GUVI Certification - 2y03tz102Ak2K767j7.png" alt="HCL GUVI Certification"
+                            loading="lazy" />
+                        <div class="cert-name">HCL GUVI Certification</div>
+                    </div>
+
+                    <!-- 2 -->
+                    <div class="proj-img-box oc-card reveal"
+                        onclick="openOcLight('java hackerrank.png', 'Java HackerRank')">
+                        <img src="java hackerrank.png" alt="Java HackerRank" loading="lazy" />
+                        <div class="cert-name">Java HackerRank</div>
+                    </div>
+                    <div class="proj-img-box oc-card reveal"
+                        onclick="openOcLight('microsoft.jpg', 'Hackathon at Microsoft')">
+                        <img src="microsoft.jpg" alt="Microsoft" loading="lazy" />
+                        <div class="cert-name">Hackathon at Microsoft</div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="proj-img-box oc-card reveal"
+                        onclick="openOcLight('resilience.png', 'Nestlé Resilience')">
+                        <img src="resilience.png" alt="Nestlé Resilience" loading="lazy" />
+                        <div class="cert-name">Nestlé Resilience</div>
+                    </div>
+
+                    <!-- 4 -->
+                    <div class="proj-img-box oc-card reveal"
+                        onclick="openOcLight('adobe.png', 'Adobe University Hackathon Participation')">
+                        <img src="adobe.png" alt="Adobe University Hackathon Participation" loading="lazy" />
+                        <div class="cert-name">Adobe Hackathon Participation</div>
+                    </div>
+
+                    <!-- 5 -->
+                    <div class="proj-img-box oc-card reveal"
+                        onclick="openOcLight('aditya.png', 'Aditya Birla Group Engenuity Participation')">
+                        <img src="aditya.png" alt="Aditya Birla Group Engenuity Participation" loading="lazy" />
+                        <div class="cert-name">Aditya Birla Engenuity Participation</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ===== FOOTER CTA ===== -->
+        <section class="proj-footer-section section">
+            <div class="proj-footer-cta reveal">
+                <a href="../../index.html" class="proj-footer-btn">← Back to Portfolio</a>
+            </div>
+        </section>
+
+    </div>
+
+
+    <!-- ===== IMAGE LIGHTBOX ===== -->
+    <div id="ocLightbox" class="cert-lightbox" aria-hidden="true" role="dialog" aria-modal="true">
+
+        <div class="cert-lightbox__backdrop" onclick="closeOcLight()" style="position: fixed; inset: 0;"></div>
+
+        <div class="cert-lightbox__inner">
+            <button class="cert-lightbox__close" onclick="closeOcLight()" aria-label="Close">×</button>
+            <img id="ocLightboxImg" src="" alt="" />
+            <p id="ocLightboxTitle" class="cert-lightbox__title"></p>
+        </div>
+
+    </div>
+
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="../../script.js"></script>
+    <script>
+        // Self-contained lightbox (does not depend on script.js)
+        const ocBox = document.getElementById('ocLightbox');
+        const ocImg = document.getElementById('ocLightboxImg');
+        const ocTitle = document.getElementById('ocLightboxTitle');
+
+        function openOcLight(src, title) {
+            ocImg.src = src;
+            ocImg.alt = title;
+            ocTitle.textContent = title;
+            ocBox.classList.add('is-open');
+            ocBox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeOcLight() {
+            ocBox.classList.remove('is-open');
+            ocBox.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeOcLight();
+        });
+
+        // Fallback: if script.js doesn't reveal elements on this page, show them
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                document.querySelectorAll('.reveal:not(.in-view)').forEach(function (el) {
+                    el.classList.add('in-view');
+                });
+            }, 600);
+        });
+    </script>
+
+</body>
+
+</html>
